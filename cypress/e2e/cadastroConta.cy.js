@@ -6,36 +6,36 @@ import minhaContaPage from "../support/pages/minhaConta.page";
 let dados;
 let emailJaCadastrado;
 
-describe("Criação de nova conta", () => {
+describe("Cadastro de conta", () => {
   beforeEach(() => {
     cy.visit("/");
     homePagePage.selecionaMinhaConta();
-    cy.fixture("dados.json").then((p) => {
+    cy.fixture("data.json").then((p) => {
       dados = p;
     });
   });
 
-  it("deve criar nova conta com sucesso", () => {
+  it("deve cadastrar uma conta com sucesso", () => {
     let email = faker.internet.email();
     emailJaCadastrado = email;
     minhaContaPage.preencheEmailSenha(email, dados.senha);
     minhaContaPage.verificaSucesso();
   });
 
-  it("deve impedir criação de conta com email inválido", () => {
+  it("não deve cadastrar uma conta usando email já cadastrado", () => {
+    minhaContaPage.preencheEmailSenha(emailJaCadastrado, dados.senha);
+    minhaContaPage.mensagemDeErro();
+  });
+
+  it("não deve cadastrar uma conta com email inválido", () => {
     let email = "teste";
     minhaContaPage.preencheEmailSenha(email, dados.senha);
     minhaContaPage.verificaFalha();
   });
 
-  it("deve impedir criação de conta com senha em branco", () => {
+  it("não deve cadastrar uma conta com senha em branco", () => {
     let email = faker.internet.email();
     minhaContaPage.preencheEmail(email);
-    minhaContaPage.mensagemDeErro();
-  });
-
-  it("deve exibir mensagem de email já cadastrado", () => {
-    minhaContaPage.preencheEmailSenha(emailJaCadastrado, dados.senha);
     minhaContaPage.mensagemDeErro();
   });
 });

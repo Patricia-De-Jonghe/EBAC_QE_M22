@@ -1,18 +1,3 @@
-Cypress.Commands.add("adicionaProduto", () => {
-  const fd = new FormData();
-  fd.append("product_sku", "");
-  fd.append("product_id", "8787");
-  fd.append("quantity", "1");
-
-  cy.request({
-    url: "/?wc-ajax=add_to_cart",
-    method: "POST",
-    body: fd,
-  }).then((resp) => {
-    expect(resp.status).to.eq(200);
-  });
-});
-
 Cypress.Commands.add(
   "checkout",
   (nome, sobrenome, pais, rua, cidade, estado, cep, fone, email) => {
@@ -43,5 +28,20 @@ Cypress.Commands.add(
     }).then((resp) => {
       expect(resp.status).to.eq(200);
     });
-  }
+  },
+
+Cypress.Commands.add("adicionaProduto", () => {
+  const fd = new FormData();
+  fd.append("product_sku", "");
+  fd.append("product_id", "8787");
+  fd.append("quantity", "1");
+
+  cy.request({
+    url: "/?wc-ajax=add_to_cart",
+    method: "POST",
+    body: fd,
+  }).then((resp) => {
+    expect(resp.status).to.eq(200);
+  });
+})
 );

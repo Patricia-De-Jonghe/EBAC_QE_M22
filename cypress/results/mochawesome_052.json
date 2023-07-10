@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 3,
-    "passes": 2,
+    "passes": 3,
     "pending": 0,
-    "failures": 1,
-    "start": "2023-07-10T20:08:27.590Z",
-    "end": "2023-07-10T20:08:50.659Z",
-    "duration": 23069,
+    "failures": 0,
+    "start": "2023-07-10T20:53:20.691Z",
+    "end": "2023-07-10T20:53:41.371Z",
+    "duration": 20680,
     "testsRegistered": 3,
-    "passPercent": 66.66666666666666,
+    "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "6c774aaf-e96b-4182-93b7-7c9152a22474",
+      "uuid": "85e70a89-2515-4c24-a400-1fb8f23cfe0e",
       "title": "",
       "fullFile": "cypress/e2e/carrinho.cy.js",
       "file": "cypress/e2e/carrinho.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "f99466cd-d402-4e89-8462-2bd77916dd1c",
+          "uuid": "8f285183-9b3c-4651-b429-35437b2ac73a",
           "title": "Operações no carrinho",
           "fullFile": "",
           "file": "",
@@ -35,10 +35,10 @@
           "afterHooks": [],
           "tests": [
             {
-              "title": "deve adicionar item no carrinho com sucesso",
-              "fullTitle": "Operações no carrinho deve adicionar item no carrinho com sucesso",
+              "title": "deve adicionar produto no carrinho com sucesso",
+              "fullTitle": "Operações no carrinho deve adicionar produto no carrinho com sucesso",
               "timedOut": null,
-              "duration": 5755,
+              "duration": 6571,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -47,38 +47,34 @@
               "context": null,
               "code": "let mensagem = \"\\n                      Ver carrinho\\n                      “Augusta Pullover Jacket” foi adicionado no\\n                      seu carrinho.\\n                    \";\n_productPage.default.validaMensagemAdicionado(mensagem);",
               "err": {},
-              "uuid": "110d81ee-e9d1-459b-9ef0-ea18260f7988",
-              "parentUUID": "f99466cd-d402-4e89-8462-2bd77916dd1c",
+              "uuid": "53abc6a2-d650-473d-aad4-df55b9323325",
+              "parentUUID": "8f285183-9b3c-4651-b429-35437b2ac73a",
               "isHook": false,
               "skipped": false
             },
             {
-              "title": "deve atualizar um item do carrinho com sucesso",
-              "fullTitle": "Operações no carrinho deve atualizar um item do carrinho com sucesso",
+              "title": "deve atualizar produto no carrinho com sucesso",
+              "fullTitle": "Operações no carrinho deve atualizar produto no carrinho com sucesso",
               "timedOut": null,
-              "duration": 10655,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 7070,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "let mensagem = \"Carrinho atualizado.\";\nlet quantidade = Math.floor(Math.random() * 10);\n_productPage.default.irParaCarrinho();\n_carrinhoPage.default.atualizaCarrinho(quantidade);\n_carrinhoPage.default.validaMensagemAdicionado(mensagem);",
-              "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.woocommerce-message`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.woocommerce-message`, but never found it.\n    at Carrinho.validaMensagemAdicionado (webpack:///./cypress/support/pages/carrinho.page.js:10:37)\n    at Context.eval (webpack:///./cypress/e2e/carrinho.cy.js:84:17)",
-                "diff": null
-              },
-              "uuid": "84d709cc-d17e-48a2-947c-484456250c97",
-              "parentUUID": "f99466cd-d402-4e89-8462-2bd77916dd1c",
+              "err": {},
+              "uuid": "b338701e-d500-4743-8a51-a78037bc68bb",
+              "parentUUID": "8f285183-9b3c-4651-b429-35437b2ac73a",
               "isHook": false,
               "skipped": false
             },
             {
-              "title": "deve remover item do carrinho com sucesso",
-              "fullTitle": "Operações no carrinho deve remover item do carrinho com sucesso",
+              "title": "deve remover um produto do carrinho com sucesso",
+              "fullTitle": "Operações no carrinho deve remover um produto do carrinho com sucesso",
               "timedOut": null,
-              "duration": 6424,
+              "duration": 6826,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -87,23 +83,22 @@
               "context": null,
               "code": "let mensagem = \"“Augusta Pullover Jacket” removido.\";\n_productPage.default.irParaCarrinho();\n_carrinhoPage.default.removeItem();\n_carrinhoPage.default.validaMensagemAdicionado(mensagem);",
               "err": {},
-              "uuid": "ffd4ebac-fcf3-4f12-9e57-7687944afbb9",
-              "parentUUID": "f99466cd-d402-4e89-8462-2bd77916dd1c",
+              "uuid": "4102671d-0671-4394-a913-3cc6b4f03adf",
+              "parentUUID": "8f285183-9b3c-4651-b429-35437b2ac73a",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "110d81ee-e9d1-459b-9ef0-ea18260f7988",
-            "ffd4ebac-fcf3-4f12-9e57-7687944afbb9"
+            "53abc6a2-d650-473d-aad4-df55b9323325",
+            "b338701e-d500-4743-8a51-a78037bc68bb",
+            "4102671d-0671-4394-a913-3cc6b4f03adf"
           ],
-          "failures": [
-            "84d709cc-d17e-48a2-947c-484456250c97"
-          ],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 22834,
+          "duration": 20467,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

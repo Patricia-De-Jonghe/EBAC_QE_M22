@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-07-10T20:07:34.545Z",
-    "end": "2023-07-10T20:07:35.896Z",
-    "duration": 1351,
+    "start": "2023-07-10T20:48:04.087Z",
+    "end": "2023-07-10T20:48:04.970Z",
+    "duration": 883,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "a3f2dfc7-b42a-4e1d-995b-1fa536d3feac",
+      "uuid": "b344e155-087d-4ceb-9e96-239815d7565b",
       "title": "",
       "fullFile": "cypress/e2e/checkout.cy.js",
       "file": "cypress/e2e/checkout.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "6f4f5b52-6c05-40d5-8398-f0834ec2fc76",
+          "uuid": "34897900-f6c8-4e3b-9cd7-017dbf6672fb",
           "title": "Checkout",
           "fullFile": "",
           "file": "",
@@ -35,32 +35,32 @@
           "afterHooks": [],
           "tests": [
             {
-              "title": "deve realizar checkout com sucesso",
-              "fullTitle": "Checkout deve realizar checkout com sucesso",
+              "title": "deve realizar o checkout com sucesso",
+              "fullTitle": "Checkout deve realizar o checkout com sucesso",
               "timedOut": null,
-              "duration": 1278,
+              "duration": 859,
               "state": "passed",
               "speed": "fast",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "let nome = _faker.faker.name.firstName;\nlet sobrenome = _faker.faker.name.lastName;\nlet pais = _faker.faker.address.countryCode;\nlet rua = _faker.faker.address.streetName;\nlet cidade = _faker.faker.address.city;\nlet estado = _faker.faker.address.countryCode;\nlet cep = _faker.faker.address.zipCode;\nlet fone = _faker.faker.phone.number;\nlet email = _faker.faker.internet.email();\ncy.adicionaProduto();\ncy.checkout(nome, sobrenome, pais, rua, cidade, estado, cep, fone, email);",
+              "code": "let nome = _faker.faker.person.firstName;\nlet sobrenome = _faker.faker.person.lastName;\nlet pais = _faker.faker.location.countryCode;\nlet rua = _faker.faker.location.streetName;\nlet cidade = _faker.faker.location.city;\nlet estado = _faker.faker.location.countryCode;\nlet cep = _faker.faker.location.zipCode;\nlet fone = _faker.faker.phone.number;\nlet email = _faker.faker.internet.email();\ncy.adicionaProduto();\ncy.checkout(nome, sobrenome, pais, rua, cidade, estado, cep, fone, email);",
               "err": {},
-              "uuid": "344d1dbd-00f9-46f1-9405-7801857e403b",
-              "parentUUID": "6f4f5b52-6c05-40d5-8398-f0834ec2fc76",
+              "uuid": "c2ccf230-0f89-4c07-bc1c-740d965b752e",
+              "parentUUID": "34897900-f6c8-4e3b-9cd7-017dbf6672fb",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "344d1dbd-00f9-46f1-9405-7801857e403b"
+            "c2ccf230-0f89-4c07-bc1c-740d965b752e"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1278,
+          "duration": 859,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

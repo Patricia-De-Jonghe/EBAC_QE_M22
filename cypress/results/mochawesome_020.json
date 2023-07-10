@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-07-10T20:07:34.545Z",
-    "end": "2023-07-10T20:07:35.896Z",
-    "duration": 1351,
+    "start": "2023-07-10T20:27:40.177Z",
+    "end": "2023-07-10T20:27:41.434Z",
+    "duration": 1257,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "a3f2dfc7-b42a-4e1d-995b-1fa536d3feac",
+      "uuid": "45942194-5102-4902-83ce-5dad49919b83",
       "title": "",
       "fullFile": "cypress/e2e/checkout.cy.js",
       "file": "cypress/e2e/checkout.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "6f4f5b52-6c05-40d5-8398-f0834ec2fc76",
+          "uuid": "417167d8-8eec-4bfb-8b5b-31fbe5b54aa3",
           "title": "Checkout",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,29 @@
               "title": "deve realizar checkout com sucesso",
               "fullTitle": "Checkout deve realizar checkout com sucesso",
               "timedOut": null,
-              "duration": 1278,
+              "duration": 1208,
               "state": "passed",
               "speed": "fast",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "let nome = _faker.faker.name.firstName;\nlet sobrenome = _faker.faker.name.lastName;\nlet pais = _faker.faker.address.countryCode;\nlet rua = _faker.faker.address.streetName;\nlet cidade = _faker.faker.address.city;\nlet estado = _faker.faker.address.countryCode;\nlet cep = _faker.faker.address.zipCode;\nlet fone = _faker.faker.phone.number;\nlet email = _faker.faker.internet.email();\ncy.adicionaProduto();\ncy.checkout(nome, sobrenome, pais, rua, cidade, estado, cep, fone, email);",
+              "code": "let nome = _faker.faker.person.firstName;\nlet sobrenome = _faker.faker.person.lastName;\nlet pais = _faker.faker.location.countryCode;\nlet rua = _faker.faker.location.streetName;\nlet cidade = _faker.faker.location.city;\nlet estado = _faker.faker.location.countryCode;\nlet cep = _faker.faker.location.zipCode;\nlet fone = _faker.faker.phone.number;\nlet email = _faker.faker.internet.email();\ncy.adicionaProduto();\ncy.checkout(nome, sobrenome, pais, rua, cidade, estado, cep, fone, email);",
               "err": {},
-              "uuid": "344d1dbd-00f9-46f1-9405-7801857e403b",
-              "parentUUID": "6f4f5b52-6c05-40d5-8398-f0834ec2fc76",
+              "uuid": "8c58da2e-315d-4e3d-8eee-3ee3921c6e8d",
+              "parentUUID": "417167d8-8eec-4bfb-8b5b-31fbe5b54aa3",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "344d1dbd-00f9-46f1-9405-7801857e403b"
+            "8c58da2e-315d-4e3d-8eee-3ee3921c6e8d"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1278,
+          "duration": 1208,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

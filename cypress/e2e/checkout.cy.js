@@ -2,14 +2,14 @@
 import { faker } from "@faker-js/faker";
 
 describe("Checkout", () => {
-  it("deve realizar checkout com sucesso", () => {
-    let nome = faker.name.firstName;
-    let sobrenome = faker.name.lastName;
-    let pais = faker.address.countryCode;
-    let rua = faker.address.streetName;
-    let cidade = faker.address.city;
-    let estado = faker.address.countryCode;
-    let cep = faker.address.zipCode;
+  it("deve realizar o checkout com sucesso", () => {
+    let nome = faker.person.firstName;
+    let sobrenome = faker.person.lastName;
+    let pais = faker.location.countryCode;
+    let rua = faker.location.streetName;
+    let cidade = faker.location.city;
+    let estado = faker.location.countryCode;
+    let cep = faker.location.zipCode;
     let fone = faker.phone.number;
     let email = faker.internet.email();
     cy.adicionaProduto();

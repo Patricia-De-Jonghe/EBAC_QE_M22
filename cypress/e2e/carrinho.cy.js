@@ -2,7 +2,7 @@
 import productPage from "../support/pages/product.page.js";
 import carrinhoPage from "../support/pages/carrinho.page.js";
 const fragments = require("../fixtures/fragments.json");
-const fragments2 = require("../fixtures/fragments2.json");
+const fragments1 = require("../fixtures/fragments1.json");
 
 describe("Operações no carrinho", () => {
   before(() => {
@@ -27,7 +27,7 @@ describe("Operações no carrinho", () => {
       (req) => {
         req.reply({
           statusCode: 200,
-          body: JSON.stringify(fragments2),
+          body: JSON.stringify(fragments1),
         });
       }
     );
@@ -70,13 +70,12 @@ describe("Operações no carrinho", () => {
     productPage.compraProduto();
   });
 
-  it("deve adicionar item no carrinho com sucesso", () => {
-    let mensagem =
-      "\n                      Ver carrinho\n                      “Augusta Pullover Jacket” foi adicionado no\n                      seu carrinho.\n                    ";
+  it("deve adicionar produto no carrinho com sucesso", () => {
+    let mensagem = "\n                      Ver carrinho\n                      “Augusta Pullover Jacket” foi adicionado no\n                      seu carrinho.\n                    ";
     productPage.validaMensagemAdicionado(mensagem);
   });
 
-  it("deve atualizar um item do carrinho com sucesso", () => {
+  it("deve atualizar produto no carrinho com sucesso", () => {
     let mensagem = "Carrinho atualizado.";
     let quantidade = Math.floor(Math.random() * 10);
     productPage.irParaCarrinho();
@@ -84,7 +83,7 @@ describe("Operações no carrinho", () => {
     carrinhoPage.validaMensagemAdicionado(mensagem);
   });
 
-  it("deve remover item do carrinho com sucesso", () => {
+  it("deve remover um produto do carrinho com sucesso", () => {
     let mensagem =
       "“Augusta Pullover Jacket” removido.";
     productPage.irParaCarrinho();
